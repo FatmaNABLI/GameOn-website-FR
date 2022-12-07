@@ -24,6 +24,13 @@ const conditionsUtilisationCheck = document.getElementById('checkbox1');
 
 const submitBtn = document.getElementById("btn-submit-form");
 
+//Add active class to selected link in topnav and romove it from the last active one
+document.querySelectorAll(".main-navbar a").forEach((a)=> a.addEventListener("click",function(e){
+  document.getElementsByClassName("active")[0].classList.remove("active");
+  a.classList.add("active");
+}));
+
+
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
@@ -33,6 +40,8 @@ function launchModal() {
 }
 //close Modal event avec le bouton (X)
 closeBtn.forEach((btn) => btn.addEventListener("click", closeModal));
+
+document.getElementById("success-close").addEventListener("click",closeModal);
 
 //close Modal form
 function closeModal() {

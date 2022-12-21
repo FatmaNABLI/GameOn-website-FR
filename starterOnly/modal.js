@@ -46,6 +46,7 @@ document.getElementById("success-close").addEventListener("click",closeModal);
 //close Modal form
 function closeModal() {
   modalbg.style.display = "none";
+  window.location.reload();
 }
 
 function isName(name){

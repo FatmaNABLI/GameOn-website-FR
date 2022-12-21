@@ -40,7 +40,7 @@ function launchModal() {
 }
 //close Modal event avec le bouton (X)
 closeBtn.forEach((btn) => btn.addEventListener("click", closeModal));
-
+//close Modal event avec le bouton fermer
 document.getElementById("success-close").addEventListener("click",closeModal);
 
 //close Modal form
